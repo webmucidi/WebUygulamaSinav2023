@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 10vh;
+    
+}
+header{
+    background-color: rgb(164, 221, 202);
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+    gap: 30px;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+main{
+    background-color: white;
+    justify-self: center;
+    /* margin-left:10vw*/
+    width: 80vw;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr 1fr 1fr 2fr;
+    gap: 0.25rem;
+}
+main > section{
+    background-color: rgb(131, 204, 204);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    
+}
+main > section > img{
+    width: 100%;
+}
+
+main > section:first-child{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    
+    flex-direction: column;
+    align-items: flex-start;
+}
+main > section:first-child > a{
+    align-self: flex-end;
+}
+main > section:nth-child(2){
+    grid-column: 3/5;
+    grid-row: 1/3;
+    
+}
+
+main > section:nth-child(5){
+    
+    transition: color 1s;
+
+}
+main > section:nth-child(5):hover{
+    color: aliceblue;
+    
+}
+main > section:nth-child(6){
+    background: linear-gradient(white,blue);
+
+    
+}
+main > section:nth-child(7){
+
+    border-radius: 20px 50px;
+}
+main > section:nth-child(8){
+
+    box-shadow: 5px 5px 15px grey;
+}
+
+
+
+main > section:nth-child(9){
+    grid-column: 1/3;
+    grid-row: 4/5;
+    background: url(images/background.jpg) no-repeat;
+    background-size: cover;
+}
+main > section:last-child{
+    grid-column: 4/5;
+    grid-row: 4/5;
+    opacity: 0.5;
+}
+footer{
+    background-color: rgb(142, 142, 222);
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+
+}
+
+@media(max-width:600px){
+    body{
+        height: auto;
+    }
+    header{
+        flex-direction: column;
+        font-size: 1rem;
+
+    }
+    main{
+        background-color: white;
+        justify-self: center;
+        width: 90vw;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(11,minmax(60px,auto));
+        gap: 0.25rem;
+    }
+    main > section{
+        grid-column: 1/2;
+    }
+    main > section:first-child{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    main > section:nth-child(2){
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    main > section:nth-child(9){
+        grid-column: 1/2;
+        grid-row: 9/10;
+    }
+    main > section:last-child{
+        grid-column: 1/2;
+        grid-row: 11/12;
+    }
+
+}
