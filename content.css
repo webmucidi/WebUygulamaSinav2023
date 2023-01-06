@@ -101,6 +101,16 @@ main > section:nth-child(9){
     background: url(images/background.jpg) no-repeat;
     background-size: cover;
 }
+main > section:nth-child(10){
+    animation: renklendirme 5s 2s infinite ease-in-out;
+}
+@keyframes renklendirme {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+
 main > section:last-child{
     grid-column: 4/5;
     grid-row: 4/5;
