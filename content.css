@@ -101,6 +101,7 @@ main > section:nth-child(9){
     background: url(images/background.jpg) no-repeat;
     background-size: cover;
 }
+/* animasyon adı+animasyon süresi+gecikme+tekrar sayısı+efekt */
 main > section:nth-child(10){
     animation: renklendirme 5s 2s infinite ease-in-out;
 }
