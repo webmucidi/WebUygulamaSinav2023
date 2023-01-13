@@ -50,6 +50,7 @@ main > section{
     gap: 1rem;
     justify-content: center;
     align-items: center;
+
     
 }
 
@@ -73,8 +74,13 @@ main > section:nth-child(2){
 }
 
 /* ikinci kutudan resmin taşmaması için genişlik sınırı*/
-main > section > img{
-    width: 100%;
+main > section:nth-child(2) > img{
+    flex: 1 1 500px;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: fill;
+    
+
 }
 
 /* hover da renk geçişi*/
